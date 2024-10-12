@@ -1,0 +1,98 @@
+/* Skills.module.css */
+
+.customImage {
+    background-color:black;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .section {
+    color: #9ca3af; /* Tailwind's gray-600 */
+    font-family: Arial, sans-serif; /* Change this as needed */
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+  
+  .container {
+    padding: 6rem 1.25rem; /* Tailwind's py-24 */
+    margin: auto;
+  }
+  
+  .title {
+    color: #fbbf24; /* Tailwind's yellow-300 */
+    font-size: 2rem; /* Tailwind's text-2xl */
+    font-weight: 500; /* Tailwind's font-medium */
+    text-align: left;
+  }
+  
+  .borderTitle {
+    border-bottom: 4px solid #fbbf24; /* Tailwind's yellow-300 */
+  }
+  
+  .card {
+    padding: 1.5rem; /* Tailwind's p-4 */
+  }
+  
+  .cardWrapper {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem; /* Tailwind's rounded-lg */
+    height: 100%;
+    padding: 1.5rem; /* Tailwind's p-6 */
+    background-color: transparent; /* Adjust as needed */
+  }
+  
+  .cardHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem; /* Tailwind's mb-3 */
+  }
+  
+  .iconWrapper {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.75rem; /* Tailwind's mr-3 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #1e3a8a; /* Tailwind's blue-900 */
+    color: white;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #fbbf24; /* Tailwind's yellow-300 */
+  }
+  
+  .iconWrapper:hover {
+    background-color: #fbbf24; /* Tailwind's yellow-300 */
+    color: #1e3a8a; /* Tailwind's blue-900 */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+  }
+  
+  .skillText {
+    color: white;
+    font-size: 1.125rem; /* Tailwind's text-lg */
+    font-weight: 500; /* Tailwind's font-medium */
+  }
+  
+  .progress {
+    position: relative;
+    height: 0.25rem; /* Tailwind's h-1 */
+    width: 100%;
+    background-color: white; /* Tailwind's white */
+    border-radius: 0.5rem; /* Tailwind's rounded-xl */
+  }
+  
+  .level {
+    position: absolute;
+    background-color: #fbbf24; /* Tailwind's yellow-300 */
+    height: 100%;
+    border-radius: 0.5rem; /* Tailwind's rounded-xl */
+  }
+  
+  .levelText {
+    font-weight: bold; /* Tailwind's font-bold */
+    color: #fbbf24; /* Tailwind's yellow-300 */
+    text-align: right; /* Tailwind's text-right */
+  }
+  

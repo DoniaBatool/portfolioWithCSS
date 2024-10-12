@@ -1,0 +1,111 @@
+.footerContainer {
+  background-color: #1a202c; /* bg-gray-900 */
+}
+
+.footer {
+  color: #718096; /* text-gray-600 */
+  padding: 2rem 0; /* py-8 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a202c; /* bg-gray-900 */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px; /* Padding for spacing on large screens */
+}
+
+/* Logo on the Left */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  color: #cbd5e0; /* text-gray-400 */
+}
+
+.logo {
+  border-radius: 100%; /* Fully rounded */
+  border: 3px solid #f6e05e; /* Yellow border */
+  height: 50px;
+  width: 50px;
+}
+
+/* Title next to the logo */
+.title {
+  margin-left: 12px; /* Spacing between logo and text */
+  font-size: 1.5rem; /* Slightly bigger font */
+  color: white;
+  border-bottom: #f6e05e 2px solid;
+}
+
+/* Social Icons on the Right */
+.socialIcons {
+  display: flex;
+  gap: 16px; /* Space between the icons */
+}
+
+.socialIcons a {
+  color: #718096; /* text-gray-500 */
+  font-size: 24px; /* Icon size */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.socialIcons a:hover {
+  color: #f6e05e; /* hover:text-yellow-300 */
+  font-size: 40px; /* Increase size on hover */
+}
+
+/* Copyright centered at the bottom */
+.copyright {
+  margin-top: 16px;
+  color: #cbd5e0; /* text-gray-400 */
+  text-align: left;
+  padding-right: 100px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) { /* Medium screens */
+  .container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .logo {
+    height: 40px; /* Smaller logo */
+    width: 40px; /* Smaller logo */
+  }
+
+  .title {
+    font-size: 1.25rem; /* Slightly smaller font size */
+  }
+
+  .socialIcons {
+    margin-top: 12px; /* Add space above social icons */
+  }
+
+  .copyright {
+    text-align: center; /* Center copyright */
+    padding-right: 0; /* Remove right padding */
+    margin-top: 8px; /* Reduce margin */
+  }
+}
+
+@media (max-width: 480px) { /* Small and smaller screens */
+  .logo {
+    height: 30px; /* Even smaller logo */
+    width: 30px; /* Even smaller logo */
+  }
+
+  .title {
+    font-size: 1rem; /* Smaller font size */
+    margin-left: 8px; /* Reduced margin */
+  }
+
+  .socialIcons a {
+    font-size: 20px; /* Smaller icons */
+  }
+}

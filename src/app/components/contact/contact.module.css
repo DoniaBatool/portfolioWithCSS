@@ -1,0 +1,138 @@
+/* Container for the entire section */
+/* Global styles */
+.body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Contact section styles */
+.contact-section {
+  background-color: black;
+  padding: 24px 0;
+  color: white;
+  padding-top: 50px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px;
+  
+}
+
+/* Map section styles */
+.map-container {
+  position: relative;
+  width: 60%;
+  background-color: gray;
+  border: 4px solid yellow;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.info-box {
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border: 4px solid yellow;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-content {
+  width: 45%;
+}
+
+.info-title {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.info-link {
+  color: blue;
+  text-decoration: none;
+}
+
+/* Form section styles */
+.form-container {
+  width: 35%;
+  background-color:black;
+  border: 4px solid yellow;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+}
+
+.form-title {
+  font-size: 32px;
+  color: yellow;
+}
+
+.form-description {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  background-color: white;
+  color: black;
+}
+
+.form-textarea {
+  height: 100px;
+}
+
+.submit-button {
+  background-color: yellow;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  
+}
+
+.submit-button:hover {
+  background-color: orange;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map-container,
+  .form-container {
+    width: 100%;
+  }
+}
