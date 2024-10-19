@@ -134,7 +134,7 @@ const Project = () => {
                   <h2 className={styles.projectSubTitle}>THE ADVENTURE GAME PROJECT</h2>
                   <h1 className={styles.projectTitle}>WARFIELD</h1>
                   <p className={styles.projectDescription}>
-                  In "Warfield," you take control of a seasoned explorer venturing into a world shrouded in mystery.
+                  In Warfield, you take control of a seasoned explorer venturing into a world shrouded in mystery.
                   Navigate through perilous environments, make tough decisions, and uncover secrets.
                   </p>
                   <Link

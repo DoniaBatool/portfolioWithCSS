@@ -1,5 +1,4 @@
 import React from 'react';
-import { RiFacebookFill } from 'react-icons/ri';
 import { FaGithub, FaLinkedin } from 'react-icons/fa6';
 import Link from 'next/link';
 import Image from 'next/image';

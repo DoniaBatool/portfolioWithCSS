@@ -31,7 +31,7 @@ const About = () => {
               technologies and stay at the forefront of industry developments.
             </p>
             <div className={styles.buttonWrapper}>
-              <Link href="/media/DONIA_CV.pdf" target="_blank" rel="noopener noreferrer">
+              <Link href="/media/doniaCv.pdf" target="_blank" rel="noopener noreferrer">
                 <button className={styles.button}>
                   View CV
                 </button>

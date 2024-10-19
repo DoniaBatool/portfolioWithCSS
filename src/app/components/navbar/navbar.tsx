@@ -37,7 +37,7 @@ const Navbar = () => {
             <Link href="#contact" className={styles['navbar-link']}>CONTACT</Link>
           </nav>
 
-          <Link href="/media/DONIA_CV.pdf" target="_blank" rel="noopener noreferrer">
+          <Link href="/media/doniaCv.pdf" target="_blank" rel="noopener noreferrer">
             <button className={styles['download-btn']}>
               Download CV
               <AiOutlineCloudDownload className={styles['download-icon']} />

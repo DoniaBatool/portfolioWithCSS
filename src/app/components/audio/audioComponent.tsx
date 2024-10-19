@@ -6,8 +6,16 @@ import styles from './audio.module.css';  // Import custom CSS file
 const AudioComponent: React.FC = () => {
   useEffect(() => {
     const myAudio = new Audio('/media/audio.mp3');
+    
+    // Play audio and set autoplay
     myAudio.play();
-    myAudio.autoplay;
+    myAudio.autoplay = true;
+
+    // Cleanup the audio when component unmounts
+    return () => {
+      myAudio.pause();
+      myAudio.currentTime = 0; // Reset to start
+    };
   }, []);
 
   return (
