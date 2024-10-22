@@ -3,30 +3,38 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { AiOutlineCloudDownload } from 'react-icons/ai';
-import { FiMenu, FiX } from 'react-icons/fi'; // Importing menu and close icons
-import styles from "@/app/components/navbar/navbar.module.css"; // Importing custom CSS
+import { FiMenu, FiX } from 'react-icons/fi';
+import styles from './navbar.module.css';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false); // State to manage menu visibility
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen); // Toggle menu state
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
   };
 
   return (
     <div className={styles['navbar-wrapper']}>
       <header className={styles['navbar']}>
         <div className={styles['navbar-container']}>
-          <a className={styles['navbar-logo']}>
-            <Image 
-              src="/media/EYE.png"
-              alt="logo" 
-              width={100} 
-              height={100}
-              className={styles['navbar-logo-image']}
-            />
-            <span className={styles['navbar-logo-text']}>NINETEEN TECH</span>
-          </a>
+          <Link href="/" legacyBehavior>
+            <a>
+              <div className={styles['navbar-logo']}>
+                <Image
+                  src="/media/EYE.png"
+                  alt="logo"
+                  width={70}
+                  height={70}
+                  className={styles['navbar-logo-image']}
+                />
+                <span className={styles['navbar-logo-text']}>NINETEEN TECH</span>
+              </div>
+            </a>
+          </Link>
 
           {/* Main Navbar Links */}
           <nav className={styles['navbar-links']}>
@@ -34,18 +42,20 @@ const Navbar = () => {
             <Link href="#about" className={styles['navbar-link']}>ABOUT</Link>
             <Link href="#skills" className={styles['navbar-link']}>SKILLS</Link>
             <Link href="#project" className={styles['navbar-link']}>PROJECTS</Link>
-            <Link href="#contact" className={styles['navbar-link']}>CONTACT</Link>
+            <Link href="#Contact" className={styles['navbar-link']}>CONTACT</Link>
           </nav>
 
+          {/* Download CV Button (only visible on larger screens) */}
           <Link href="/media/doniaCv.pdf" target="_blank" rel="noopener noreferrer">
             <button className={styles['download-btn']}>
               Download CV
               <AiOutlineCloudDownload className={styles['download-icon']} />
             </button>
           </Link>
+
           {/* Hamburger Icon */}
-          <div className={styles['navbar-hamburger']}>
-            <FiMenu className={styles['menu-icon']} onClick={toggleMenu} />
+          <div className={styles['navbar-hamburger']} onClick={toggleMenu}>
+            <FiMenu className={styles['menu-icon']} />
           </div>
 
           {/* Sidebar for mobile */}
@@ -55,11 +65,16 @@ const Navbar = () => {
               <FiX className={styles['close-icon']} onClick={toggleMenu} />
             </div>
             <nav className={styles['sidebar-links']}>
-              <Link href="/" className={styles['sidebar-link']}>HOME</Link>
-              <Link href="#about" className={styles['sidebar-link']}>ABOUT</Link>
-              <Link href="#skills" className={styles['sidebar-link']}>SKILLS</Link>
-              <Link href="#project" className={styles['sidebar-link']}>PROJECTS</Link>
-              <Link href="#contact" className={styles['sidebar-link']}>CONTACT</Link>
+              {/* Close the menu when a link is clicked */}
+              <Link href="/" className={styles['sidebar-link']} onClick={closeMenu}>HOME</Link>
+              <Link href="#about" className={styles['sidebar-link']} onClick={closeMenu}>ABOUT</Link>
+              <Link href="#skills" className={styles['sidebar-link']} onClick={closeMenu}>SKILLS</Link>
+              <Link href="#project" className={styles['sidebar-link']} onClick={closeMenu}>PROJECTS</Link>
+              <Link href="#Contact" className={styles['sidebar-link']} onClick={closeMenu}>CONTACT</Link>
+              {/* Download CV Button in the sidebar */}
+              <Link href="/media/doniaCv.pdf" target="_blank" rel="noopener noreferrer" className={styles['sidebar-link-download']} onClick={closeMenu}>
+                Download CV
+              </Link>
             </nav>
           </div>
         </div>

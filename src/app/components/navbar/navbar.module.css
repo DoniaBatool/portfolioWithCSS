@@ -1,198 +1,191 @@
-/* Navbar Wrapper */
 .navbar-wrapper {
-    background-color:black;
-    background-size: cover;
-    background-position: center;
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    padding: 1rem;
-    height: 80px;
-    padding-bottom:100px;
-    
-  }
-  
-  /* Navbar */
-  .navbar {
-    color: #808080;
-    min-height: 100px;
-    
-  }
-  
-  /* Navbar Container */
-  .navbar-container {
+  position: relative;
+  width: 100vw; /* Ensure it only takes up 100% of the viewport width */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Make navbar width equal to screen width */
+  background-color: black;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Full width inside the container */
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo-image {
+  border-radius: 50%;
+  border: 2px solid yellow; /* Yellow border for the logo */
+}
+
+.navbar-logo-text {
+  margin-left: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.navbar-logo-text::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: yellow; /* Yellow underline under the logo text */
+  bottom: -3px;
+  left: 0;
+}
+
+.navbar-links {
+  display: none;
+}
+
+.navbar-hamburger {
+  display: block;
+  cursor: pointer;
+}
+
+.menu-icon, .close-icon {
+  font-size: 2rem;
+  color: white;
+}
+
+/* Download CV Button */
+.download-btn {
+  background-color: yellow; /* Yellow background */
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #ffd700; /* Slightly darker yellow on hover */
+}
+
+.download-icon {
+  font-size: 1.5rem;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -50%; /* Initially hidden */
+  width: 50%; /* Sidebar covers only half of the screen */
+  height: 100%;
+  background-color: #333;
+  z-index: 20;
+  transition: right 0.3s ease;
+}
+
+.sidebar.open {
+  right: 0; /* Sidebar opens */
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.sidebar-title {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.close-icon {
+  cursor: pointer;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar-link {
+  color: white; /* Ensure links are visible */
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.sidebar-link:hover {
+  color: #ffeb3b; /* Highlight link on hover */
+}
+
+.navbar-link {
+  color: white; /* Ensure main navbar links are visible */
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.navbar-link:hover {
+  color: yellow; /* Highlight links on hover */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .navbar-links {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    
+    gap: 20px;
   }
-  
-  /* Navbar Logo */
-  .navbar-logo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    
-  }
-  
-  .navbar-logo-image {
-    width: 70px;
-    border: 3px solid #FFC107; /* Yellow Border */
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    
-  }
-  
-  .navbar-logo-image:hover {
-    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5);
-    transform: scale(1.05);
-  }
-  
-  .navbar-logo-text {
-    margin-left: 1rem;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: white;
-    border-bottom: 4px solid #FFC107; /* Yellow Border */
-  }
-  
-  /* Hamburger Menu */
+
   .navbar-hamburger {
     display: none;
   }
-  
-  .menu-icon {
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-  }
-  
-  /* Sidebar */
+
   .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 50%;
-    background: rgba(0, 0, 0, 0.9);
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-    z-index: 100;
-  }
-  
-  .sidebar.open {
-    transform: translateX(0);
-  }
-  
-  .sidebar-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-  
-  .sidebar-title {
-    font-size: 1.5rem;
-    color: white;
-  }
-  
-  .close-icon {
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .sidebar-links {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-  }
-  
-  .sidebar-link {
-    padding: 0.5rem 0;
-    color: white;
-    font-size: 1.25rem;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .sidebar-link:hover {
-    color: #FFC107; /* Yellow Hover */
-  }
-  
-  /* Main Navbar Links */
-  .navbar-links {
     display: none;
-    margin: 0 auto;
-    text-align: center;
   }
-  
-  .navbar-link {
-    margin-right: 1.5rem;
-    color: white;
-    font-size: 1rem;
-    transition: color 0.3s, font-size 0.3s, border-bottom 0.3s;
-  }
-  
-  .navbar-link:hover {
-    color: #FFC107;
-    font-size: 1.1rem;
-    border-bottom: 4px solid #FFC107; /* Yellow Hover Border */
-  }
-  
-  /* Show hamburger icon on smaller screens */
-  @media (max-width: 768px) {
-    .navbar-hamburger {
-      display: block;
-      margin-left: auto;
-    }
-  
-    .navbar-links {
-      display: none;
-    }
-  
-    .sidebar {
-      width: 50%;
-    }
-  }
-  
-  /* Show navbar links on larger screens */
-  @media (min-width: 769px) {
-    .navbar-hamburger {
-      display: none;
-    }
-  
-    .navbar-links {
-      display: flex;
-    }
-  }
-  
-  /* Download Button */
+
   .download-btn {
-    display: inline-flex;
-    align-items: center;
-    background-color: white;
-    border: 4px solid #FFC107; /* Yellow Border */
-    padding: 0.5rem 1rem;
+    display: flex; /* Show the button in the main navbar on large screens */
+  }
+}
+
+/* Media query for small and medium screens */
+@media (max-width: 767px) {
+  .download-btn {
+    display: none; /* Hide the button in the main navbar on smaller screens */
+  }
+
+  .sidebar-links .sidebar-link-download {
+    color: yellow;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 1px solid yellow;
+    border-radius: 5px;
+  }
+
+  .sidebar-link-download:hover {
+    background-color: yellow;
     color: black;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-    border-radius: 0.25rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
-  
-  .download-btn:hover {
-    background-color: #FFC107;
-    color: black;
-    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5);
-    transform: scale(1.05);
-  }
-  
-  .download-icon {
-    margin-left: 0.5rem;
-    font-size: 1.25rem;
-  }
-  
+}
