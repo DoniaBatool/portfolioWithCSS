@@ -80,7 +80,7 @@ nav{
 }
 
 .b-text {
-    max-width: 50%;                     
+    max-width: 70%;                     
 }
 
 .b-text h1 {
@@ -353,10 +353,11 @@ nav{
 }
 .banner p{
     margin:15px 0;
-    font-size:16px;
+    font-size:28px;
 }
 .b-text{
     margin-top:50px;
+    width: 80%;
 }
 .b-image{
     display: none;
@@ -390,7 +391,7 @@ nav{
         
     }
     .menu ul li a{
-        font-size:10px;
+        font-size:15px;
         padding:3px;
         margin: auto;
     }
@@ -402,13 +403,15 @@ nav{
     }
     .banner p{
         margin: 3% 0;
-        font-size:11px;
+        font-size:28px;
     }
     .banner button{
         font-size:12px;
     }
+
     .b-text{
         margin-top:30px;
+        width:90%
     }
     .about.section-padding{
         padding:0;
@@ -446,74 +449,56 @@ nav{
         padding:50px 0;
     }
  }
- @media(max-width: 300px){
-    .logo{
-        margin-top:0;
+ 
+ @media screen and (max-width:630px){
+    .banner h1{
+        font-size:20px;
     }
-    nav{
-        padding:2px;
-        overflow: hidden;
-        flex-shrink: 1;
-        white-space: nowrap;
+    .banner p{
         
-       
+        font-size:19px;
+    }
+    .b-text{
+        margin-top:30px;
+        width:90%;
+        margin:auto;
+    }
+ }
+ @media screen and (max-width:480px){
+    .banner h1{
+        font-size:20px;
+    }
+    .banner p{
+        
+        font-size:16px;
+    }
+    .b-text{
+        margin-top:30px;
+        width:90%;
+        margin:auto;
+    }
+    .menu ul li a{
+        font-size:11px;
+        padding:3px;
+        margin: auto;
+    }
+ }
+ @media screen and (max-width:360px){
+    .banner h1{
+        font-size:20px;
+    }
+    .banner p{
+        
+        font-size:14px;
+    }
+    .b-text{
+        margin-top:30px;
+        width:90%;
+        margin:auto;
     }
     .menu ul li a{
         font-size:8px;
         padding:2px;
         margin: auto;
-       
-    }
-    .banner{
-        text-align:center;
-        
-    }
-    .banner h1{
-        font-size:18px;
-    }
-    .banner p{
-        margin: 5px 0;
-        font-size:11px;
-    }
-    .banner button{
-        font-size:12px;
-    }
-    .b-text{
-        margin-top:30px;
-    }
-    .about.section-padding{
-        padding:0;
-        margin-top:0;
-    }
-    .about-img img{
-        width:100%;
-    }
-    .about-section{
-        flex-direction:column;
-        padding:0 2%;
-    }
-    .about-text h2{
-        font-size:38px;
-    }
-    .skill-content{
-        padding: 0 2%;
-        flex-direction:coulmn;
-    }
-    .d-box{
-        width:280px;
-    }
-    .q-content p {
-        font-size:20px;
-    }
-    .services-content{
-        padding: 0 2%;
-        flex-direction:column;
-    }
-    .single-contact{
-        padding:25px;
-        width:100%;
-    }
-    footer .section-padding{
-        padding:50px 0;
     }
  }

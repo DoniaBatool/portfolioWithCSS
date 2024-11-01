@@ -2,7 +2,7 @@
 
 const Skills = () => {
   return (
-    <div className="skills section-padding">
+    <div id="skills"className="skills section-padding">
         <div className="section-header">
             <h2>My <span>Skills</span></h2>
             
