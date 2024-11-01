@@ -1,19 +1,22 @@
+import About from "./components/About";
+import Header from "./components/Header";
+import Quote from "./components/Quote";
+import Services from "@/app/components/Services";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
-import Hero from "./components/hero/hero";
-import About from "./components/about/about"
-import Skills from "./components/skills/skills";
-import Project from "./components/project/projects";
 
-import Contact from "@/app/components/contact/contact"
 export default function Home() {
   return (
     <div>
-      <Hero/>
+      <Header/>
       <About/>
-       <Skills/> 
-       <Project/>
+      <Skills/>
+      <Quote/>
+      <Services/>
        <Contact/>
-       
+       <Footer/>
       </div>
   );
 }
