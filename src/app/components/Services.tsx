@@ -14,7 +14,7 @@ const Services = () => {
                   <i className="fa fa-martini-glass"></i>
                 </div>
                 <h2>Web Design</h2>
-                <p>I'm a web designer dedicated to building visually captivating and user-friendly websites that leave a lasting impact. I focus on creating responsive, 
+                <p>I m a web designer dedicated to building visually captivating and user-friendly websites that leave a lasting impact. I focus on creating responsive, 
                   accessible designs that adapt beautifully to any device, ensuring a seamless experience for every user.</p>
                 <Link href="#">Learn More</Link>
             </div>
