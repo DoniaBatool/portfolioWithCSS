@@ -22,7 +22,7 @@ const Header = () => {
         
         <div className="banner">
     <div className="b-text">
-        <h1>I'm Donia Batool <span>Web Designer</span></h1>
+        <h1>I m Donia Batool <span>Web Designer</span></h1>
         <p>
             I m a passionate web developer with expertise in Next.js, React, and Tailwind CSS, creating responsive and dynamic web experiences. 
             My projects focus on functionality, aesthetics, and user engagement through optimized design and code.
